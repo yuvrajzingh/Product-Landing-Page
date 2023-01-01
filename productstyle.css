@@ -1,0 +1,603 @@
+:root{
+    --primary-color: rgb(22, 21, 21);
+    --secondary-color: rgb(107, 107, 107);
+    --overlay-color: rgba(0,0,0,0.7);
+    --overlay-color2:rgba(255, 255, 255, 0.4);     
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    font-family: 'catamaran', sans-serif;
+    color: #333;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: #444;
+    text-decoration: none;
+}
+
+ img{
+    width: 100%;
+}
+
+.container{
+    max-width:fit-content;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 1rem;
+    
+}
+
+.navbar{
+    width: 100%;
+    background-color:snow;
+    position: fixed;
+    box-shadow: 0 0 4px rgba(0,0,0,0.7);
+    padding-bottom: 0rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    z-index:10;
+}
+
+.navbar #header-img {
+    width: 35%;
+    
+}
+
+#nav-bar, .nav{
+    display: flex;
+    /* justify-self: flex-end; */
+    /* align-items: center; */
+    align-items: center;
+    justify-content: center;
+    /* padding 0.5rem 0; */
+
+}
+
+.navbar a{
+    padding: 0 0.2rem;
+    margin: 0rem 0.8rem;
+    
+    font-size: 1.3rem;
+}
+
+.nav a:hover {
+    color:rgb(27, 160, 204);
+    text-decoration:underline;
+    
+}
+
+.navbar form{
+    /* padding: 0.5rem 0; */
+    display: block;
+    margin-bottom: auto;
+    margin-top: auto;
+    justify-self: center;
+    font-size: 1.4rem;
+}
+
+.navbar .email-form input{
+    margin-left:  0.2rem;
+    padding: 3px;
+    font-size: 1.4rem;
+}
+
+.section-a .homewall img{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+                    /*section b*/ 
+.section-b{
+    position: relative;
+}
+.section-b .aboutwall{
+    
+    object-fit: cover;
+    margin-bottom:1rem;
+}
+.video iframe{
+    position: absolute;
+    width: 40vw;
+    height: 55vh;
+    top:20%;
+    left: 3%;
+    border-color: #333;
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.7) ;
+}
+
+
+
+
+                /*section c*/
+                
+
+
+.section-c h1{
+    text-align: center;
+    font-size: 2.5rem;
+    /*font-family:'Montserrat';*/
+    color:whitesmoke;
+    margin: 1rem 0;
+    background:rgb(27, 160, 204);
+    margin-bottom: 1.4rem;
+}
+.section-c hr{
+    width: 50%;
+    background-color:whitesmoke;
+    margin:0 auto;
+}
+   .section-c .gallery{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    gap: 10%;
+    margin: 0 8%;
+    
+   }
+                 /*gallery 1*/
+
+  .gallery1{
+    position: relative;
+    box-shadow: -4px -4px 10px rgba(0, 0, 0, 0.5) ;
+  }   
+  .gallery1 h2{
+      display: flex;
+      position: absolute;
+      color: whitesmoke;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      font-size: 15vh;
+  }            
+  .gallery1 .girl_image {
+     display: grid;
+     justify-content: center;
+     grid-template-columns: repeat(2,1fr);
+     height: 100%;
+     }
+
+    .girl_overlay{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--overlay-color);
+        color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity:0 ;
+        transition: 0.5s;
+        
+    }
+    .girl_overlay p{
+        position: absolute;
+        background:rgb(27, 160, 204);
+        font-size: 2rem;
+        color:whitesmoke;
+        width: 100%;
+        top: 60%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .gallery1 img:nth-child(1){
+        height:100%;
+        object-fit:cover;
+    }
+    .gallery1 img:nth-child(2){
+        height:100%;
+        object-fit:cover;
+    }
+    .gallery1 img:nth-child(3){
+        height:100%;
+        object-fit:cover;
+    }
+    .gallery1 img:nth-child(4){
+        height:100%;
+        object-fit:cover;
+    }
+
+    .gallery1 .girl_overlay:hover{
+        opacity: 1;
+    }
+    
+    
+
+                 /*gallery2*/
+
+
+  .gallery2{
+      position: relative;
+      box-shadow: 4px -4px 10px rgba(0, 0, 0, 0.7) ;
+  } 
+  .gallery2 h2{
+      display: flex;
+      position: absolute;
+      color: whitesmoke;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      font-size: 15vh;
+    
+}                                     
+  .gallery2 .men_image{
+     display: grid;
+     justify-content:center ;
+     grid-template-columns: repeat(2,1fr);
+     
+ }
+ .men_overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color);
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity:0 ;
+    transition: 0.5s;
+}
+.men_overlay p{
+    position: absolute;
+    background:rgb(27, 160, 204);
+    font-size: 2rem;
+    color:whitesmoke;
+    width: 100%;
+    top: 60%;
+    display: flex;
+    justify-content: center;
+}
+    .gallery2 .men_overlay:hover{
+        opacity: 1;
+    }
+    .gallery2 img:nth-child(1){
+        height:100%;
+        object-fit:cover;
+    }
+    .gallery2 img:nth-child(2){
+        height:100%;
+        object-fit:cover;
+    }
+    .gallery2 img:nth-child(3){
+        height:100%;
+        object-fit:cover;
+    }
+    .gallery2 img:nth-child(4){
+        height:100%;
+        object-fit:cover;
+    }
+
+
+                /*section d   sports */
+
+.section-d{
+    position: relative;
+    width: 100vw;
+}
+.section-d h1{
+    text-align: center;
+    font-size: 2.5rem;
+    /*font-family:'Montserrat';*/
+    color:whitesmoke;
+    background: rgb(27, 160, 204);
+    margin: 2rem 0 0.8rem 0 ;
+}
+.boxingwall ,.deadliftwall {
+    position: relative;
+}
+.section-d h2{
+     display: flex;
+     position: absolute;
+     color: whitesmoke;
+     width:100%;
+     height: 100%;
+     justify-content: center;
+     align-items: center;
+     font-size: 15vh;
+     opacity: 1;
+     
+   
+} 
+/* word-back{
+    position: absolute;
+    width: 100%;
+    background-color: var(--overlay-color);
+    height: 0;
+} */
+
+
+.section-d hr{
+    width: 50%;
+    background-color: whitesmoke;
+    margin:0 auto;
+}
+
+.section-d .deadliftwall img{
+    height: 76vh;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom:0rem;
+}
+.section-d .deadliftwall { 
+    margin-bottom:1rem;
+}
+.section-d .boxingwall { 
+    margin-bottom:1rem;
+}
+
+.section-d .boxingwall img{
+    height: 75vh;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom:-1rem;
+}
+.deadlift_overlay{
+    position:absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color);
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity:0 ;
+    transition: 0.5s;
+}
+
+.deadlift_overlay:hover{
+    opacity: 1;
+}
+.boxing_overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color);
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity:0 ;
+    transition: 0.5s;
+}
+.boxing_overlay:hover{
+    opacity: 1;
+}
+                         
+
+
+
+
+
+               /*section-e*/
+
+.section-e{
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    gap: 7%;
+    margin: 0.5rem 0;
+    background-color: var(--primary-color)
+}
+/*.section-e fieldset{
+    height:fit-content;
+}
+.section-e .word {
+    display: flex;
+    align-items center;
+}
+.section-e  p  {
+    margin: 1rem;
+    text-align: center;
+}
+
+.secb-inner{ 
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: flex-start;
+    text-align: start;
+    max-width: 800px;
+
+}
+.secb-inner fieldset{
+    color:rgb(0, 0, 0);
+    margin 2rem;
+    width50%;
+    top: 0;
+}
+.secb-inner h3{
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 1rem; 
+    line-height: 3rem;  
+    display: flex;
+    justify-content: center;
+
+ }*/
+.quote1{
+    
+    margin: 0 8%;
+}
+.word{
+    margin: 0 -10%;
+
+}
+.quote2{
+    margin: 0 8%;
+}
+.word{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: whitesmoke;
+
+}
+.word-head{
+    margin: 2rem 0;
+    
+}
+.word-head h2{
+font-size: 2rem;
+text-align: center;
+}
+.word p{
+    text-align: center;
+}
+
+
+               /*section-f*/
+
+.section-f{
+    background-color: var(--secondary-color);
+    color:seashell;
+    padding: 2rem;
+
+}
+.section-f a{
+    color: white;
+    
+}
+.section-f .container{
+   
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    
+
+}
+
+/*media Queries*/
+
+@media only screen and (max-width: 700px){
+     
+    .container{
+        max-width:fit-content;
+        margin: auto;
+        overflow: hidden;
+        padding: 0;
+        
+    }
+     .navbar{
+         display: block;
+     }
+
+    
+     .navbar form{
+         display: flex;
+         justify-content:center ;
+     }
+
+     .navbar #header-img {
+         position: relative;
+         left: 70px;
+     }
+     
+
+     .section-b .aboutwall img{
+         display: none;
+     }
+
+     .section-b{
+         position: relative;
+     }
+     .section-b iframe{
+         position: absolute;
+         width: 100%;
+         height:100%;
+         top:0;
+         left: 0;
+         
+     }
+
+     .section-c .gallery{
+         display: inline-block;
+     }
+
+     .gallery1 h2, .gallery2 h2{
+         font-size: 4rem;
+     }
+
+     .gallery2{
+         margin-top: 40px;
+         box-shadow: -4px -4px 10px rgba(0, 0, 0, 0.5) ;
+     }
+
+     .girl_overlay , .men_overlay {
+        background: none; 
+        opacity: 1;
+     }
+     .girl_overlay p, .men_overlay p{
+        font-size: 1rem;
+     }
+
+     .deadliftwall h2, .boxingwall h2{
+        font-size: 3rem;
+     }
+
+     .section-e{
+         display: block;
+     }
+
+     .quote1, .quote2{
+         display: none;
+     }
+     
+
+     .word h2{
+         font-size: 30px;
+     }
+     .word p{
+         font-size: 10px;
+     }
+
+     .section-e{
+         margin-bottom:0rem;
+     }
+
+     .word-head{
+         margin-bottom: 2rem;
+     }
+
+     .word fieldset{
+         margin: 1rem  3rem;
+        
+     }
+     .section-f .container{
+         display: block;
+        }
+
+     .section-f .help, .account{
+         margin: 1rem;
+         border-bottom: 1px solid white;
+     }    
+
+
+
+     
+
+
+}
+
