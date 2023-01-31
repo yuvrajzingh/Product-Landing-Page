@@ -26,7 +26,7 @@ a{
     text-decoration: none;
 }
 
- img{
+img{
     width: 100%;
 }
 
@@ -44,37 +44,34 @@ a{
     position: fixed;
     box-shadow: 0 0 4px rgba(0,0,0,0.7);
     padding-bottom: 0rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
+
+    display: flex;
+    justify-content: space-between;
     z-index:10;
 }
 
 .navbar #header-img {
-    width: 35%;
-    
+    width: 15%;  
 }
 
 #nav-bar, .nav{
     display: flex;
-    /* justify-self: flex-end; */
-    /* align-items: center; */
     align-items: center;
     justify-content: center;
-    /* padding 0.5rem 0; */
-
 }
 
 .navbar a{
     padding: 0 0.2rem;
     margin: 0rem 0.8rem;
-    
     font-size: 1.3rem;
 }
 
 .nav a:hover {
+    font-weight: 550;
     color:rgb(27, 160, 204);
-    text-decoration:underline;
-    
+    transition: 0.3s ease; 
 }
 
 .navbar form{
@@ -82,14 +79,15 @@ a{
     display: block;
     margin-bottom: auto;
     margin-top: auto;
+    margin-right: 15px;
     justify-self: center;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 .navbar .email-form input{
     margin-left:  0.2rem;
     padding: 3px;
-    font-size: 1.4rem;
+    font-size: 1rem;
 }
 
 .section-a .homewall img{
